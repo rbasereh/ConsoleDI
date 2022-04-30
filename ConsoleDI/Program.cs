@@ -24,15 +24,16 @@ namespace ConsoleDI
         {
             using (var scope = Container.BeginLifetimeScope())
             {
-                var writer2 = scope.Resolve<IValidator<ICustomer>>();
-                var writer3 = scope.Resolve<IValidator<IEmployee>>();
-                var writer6 = scope.Resolve<IValidator<IProduct>>();
-                var writer1 = scope.Resolve<IValidator<IPerson>>();
-                var writer4 = scope.Resolve<IEntity>();
-                var writer5 = scope.Resolve<IPerson>();
-                var writer11 = scope.Resolve<IProduct>();
-                var writer12 = scope.Resolve<IEmployee>();
-                var writer13 = scope.Resolve<ICustomer>();
+                var validator1 = scope.Resolve<IValidator<IPerson>>();
+                var validator2 = scope.Resolve<IValidator<ICustomer>>();
+                var validator3 = scope.Resolve<IValidator<IEmployee>>();
+                var validator4 = scope.Resolve<IValidator<IProduct>>();
+
+                var entity = scope.Resolve<IEntity>();
+                var person = scope.Resolve<IPerson>();
+                var product = scope.Resolve<IProduct>();
+                var employee = scope.Resolve<IEmployee>();
+                var customer = scope.Resolve<ICustomer>();
             }
         }
 
